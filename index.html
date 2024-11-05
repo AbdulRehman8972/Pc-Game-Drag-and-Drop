@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builder Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <header>
+        <h1>PC Builder Simulator</h1>
+        <div id="money-display">💰 Money: $<span id="money">0</span></div>
+        <button id="clicker-btn">Click to Earn Money</button>
+    </header>
+
+    <main>
+        <!-- Shop Section -->
+        <section id="pc-parts-shop">
+            <h2>PC Parts Shop</h2>
+            <div class="part" draggable="true" data-part="cpu">
+                <img src="https://m.media-amazon.com/images/I/51So7GoGvxL._AC_SX425_.jpg" alt="CPU" class="part-image">
+                <span>Ryzen 5-$100</span>
+            </div>
+            <div class="part" draggable="true" data-part="cpu">
+                <img src="https://m.media-amazon.com/images/I/61m0zH-NiTL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="CPU" class="part-image">
+                <span>intel i7-$180</span>
+            </div>
+            <div class="part" draggable="true" data-part="gpu">
+                <img src="https://cdn.mos.cms.futurecdn.net/Q8QdeZv4CDLyfuCdbuhaDm.jpg" alt="GPU" class="part-image">
+                <span>nvidia rtx 3070 - $300</span>
+            </div>
+            <div class="part" draggable="true" data-part="ram">
+                <img src="https://m.media-amazon.com/images/I/51plQyRoadL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="RAM" class="part-image">
+                <span>RAM - $50</span>
+                <p>Fast memory for better multitasking.</p>
+            </div>
+            <div class="part" draggable="true" data-part="motherboard">
+                <img src="https://m.media-amazon.com/images/I/814jl4CVQWL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg" alt="Motherboard" class="part-image">
+                <span>Motherboard - $369</span>
+                <p>Essential board to connect all components.</p>
+            </div>
+            <div class="part" draggable="true" data-part="storage">
+                <img src="https://images.samsung.com/is/image/samsung/p6pim/ca/mz-v9p1t0b-am/gallery/ca-990pro-nvme-m2-ssd-mz-v9p1t0b-am-533750475?$650_519_PNG$" alt="Storage" class="part-image">
+                <span>Storage - $75</span>
+                <p>Large capacity storage for files and games.</p>
+            </div>
+            <div class="part" draggable="true" data-part="psu">
+                <img src="https://rog.asus.com/event/psu/asus-power-supply-calculator/global/assets/img/kv.jpg" alt="PSU" class="part-image">
+                <span>PSU - $120</span>
+                <p>Reliable power supply for your system.</p>
+            </div>
+            <div class="part" draggable="true" data-part="case">
+                <img src="https://m.media-amazon.com/images/I/51SylL60JXL._AC_UF1000,1000_QL80_.jpg" alt="Case" class="part-image">
+                <span>Case - $80</span>
+                <p>Sturdy case to protect all components.</p>
+            </div>
+        </section>
+
+        <!-- PC Builder Area -->
+        <section id="pc-builder-area">
+            <h2>Your PC Build</h2>
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+                <span id="progress-text">Build Completion: 0%</span>
+            </div>
+            <div id="pc-slot-cpu" class="slot" data-part="cpu">
+                <span>CPU Slot</span>
+            </div>
+            <div id="pc-slot-gpu" class="slot" data-part="gpu">
+                <span>GPU Slot</span>
+            </div>
+            <div id="pc-slot-ram" class="slot" data-part="ram">
+                <span>RAM Slot</span>
+            </div>
+            <div id="pc-slot-motherboard" class="slot" data-part="motherboard">
+                <span>Motherboard Slot</span>
+            </div>
+            <div id="pc-slot-storage" class="slot" data-part="storage">
+                <span>Storage Slot</span>
+            </div>
+            <div id="pc-slot-psu" class="slot" data-part="psu">
+                <span>PSU Slot</span>
+            </div>
+            <div id="pc-slot-case" class="slot" data-part="case">
+                <span>Case Slot</span>
+            </div>
+        </section>
+        
+        <button id="generate-pc-btn">Generate PC</button>
+        <div id="build-summary"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
